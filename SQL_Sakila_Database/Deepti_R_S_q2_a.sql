@@ -1,0 +1,1 @@
+CREATE VIEW action_view asSELECT DISTINCT c.customer_idFROM customer as cJOIN rental as r on r.customer_id = c.customer_idJOIN inventory as i on i.inventory_id=r.inventory_idJOIN film_category as t on t.film_id = i.film_idJOIN category as cat on (cat.category_id = t.category_id) and cat.name = "Action"GROUP by c.customer_idORDER BY  c.customer_id;

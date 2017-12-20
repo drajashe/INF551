@@ -1,0 +1,1 @@
+SELECT concat(a.first_name," ",a.last_name) AS actor_names FROM actor_info a WHERE a.actor_id in ( SELECT actor_id FROM film_actor  GROUP BY actor_id HAVING COUNT(actor_id) >1) ORDER BY actor_names asc;

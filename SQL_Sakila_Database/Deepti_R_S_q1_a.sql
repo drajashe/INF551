@@ -1,0 +1,1 @@
+SELECT t.title, a.name AS film_category_nameFROM film AS t,  film_category AS c, category AS a WHERE (c.film_id = t.film_id) AND (a.category_id = c.category_id)	ORDER BY t.title asc;

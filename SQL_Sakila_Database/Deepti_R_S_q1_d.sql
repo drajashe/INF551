@@ -1,0 +1,1 @@
+SELECT c.nameFROM  category as c, film_category as s , film as tWHERE (c.category_id = s.category_id)AND ( t.film_id = s.film_id)GROUP by c.category_idORDER BY  COUNT(c.category_id) desclimit  1;

@@ -1,0 +1,1 @@
+SELECT c.name, COUNT(c.category_id) as FilmcountFROM  category as c , film_category as s, film as tWHERE (c.category_id = s.category_id)AND (t.film_id = s.film_id)GROUP by c.category_id HAVING Filmcount   >= 60ORDER BY Filmcount   desc;

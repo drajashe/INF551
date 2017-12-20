@@ -1,0 +1,1 @@
+SELECT COUNT(a.customer_id)  as Customers_Watched_Action_Not_HorrorFROM action_view aWHERE  a.customer_idnot in(SELECT h.customer_id FROM horror_view h );
